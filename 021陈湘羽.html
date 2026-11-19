@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的电视剧观看清单</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        body{
+            background: #f3f0f8;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrap-box{
+            position: relative;
+            width: 950px;
+            max-width: 90vw;
+            height: 220px;
+        }
+
+        .item{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 56px;
+            display: flex;
+            align-items: center;
+        }
+
+        .item:nth-child(1){ top: 0; }
+        .item:nth-child(2){ top: 82px; }
+        .item:nth-child(3){ top: 164px; }
+
+        .title1{
+            width: 220px;
+            height: 56px;
+            line-height: 56px;
+            background-color: #b8f5f7;
+            color: #0f0e0e;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 19px;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(140,111,201,0.25);
+            transition: 0.25s ease;
+            position: absolute;
+            left: 140px;
+            top: 0;
+        }
+
+        .title1:hover{
+            background-color: #c5d7f6;
+        }
+
+        .sub-wrap{
+            overflow: hidden;
+            width: 0;
+            height: 56px;
+            transition: width 0.6s ease-out;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 370px;
+            top: 0;
+        }
+
+        .title2{
+            width: 160px;
+            height: 56px;
+            line-height: 56px;
+            background: #ffffff;
+            color: #ccb8e5;
+            text-align: center;
+            border-radius: 10px;
+            margin: 0 7px;
+            flex-shrink: 0;
+            font-size: 14px;
+            border: 1px solid #ddd4f0;
+            transition: 0.2s;
+        }
+
+        .title2:hover{
+            background: #e9e3f7;
+        }
+
+        .item:hover .sub-wrap{
+            width: 694px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap-box">
+    <div class="item">
+        <div class="title1">✊ 韩剧</div>
+        <div class="sub-wrap">
+            <div class="title2">我的有罪之人</div>
+            <div class="title2">铁拳教育</div>
+            <div class="title2">夺命许愿</div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="title1">🌧️ 内陆剧</div>
+        <div class="sub-wrap">
+            <div class="title2">今天是太阳雨</div>
+            <div class="title2">嫁金钗</div>
+            <div class="title2">入青云</div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="title1">☀️ 台剧</div>
+        <div class="sub-wrap">
+            <div class="title2">如果我不曾见过太阳</div>
+            <div class="title2">不良执念清除师</div>
+            <div class="title2">俗女养成记</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
